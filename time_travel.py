@@ -60,5 +60,17 @@ def build_daily_frequency_table():
 
 count_availability = build_daily_frequency_table()
 
+# Step 2 - Count the number of people every night.
+def calculate_availability(gamers_list, available_frequency):
+    for gamer in gamers_list:
+# For each day in the gamer's availability, add one to that date on the frequency table.
+        for day in gamer['availability']:
+            available_frequency[day] += 1
+
+# Best night to run Time Travel!
+calculate_availability(gamers, count_availability)
+print(count_availability)
+# output
+# {'Monday': 6, 'Tuesday': 9, 'Wednesday': 6, 'Thursday': 9, 'Friday': 7, 'Saturday': 6, 'Sunday': 7}
 
   
