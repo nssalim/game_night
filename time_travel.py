@@ -33,7 +33,7 @@ add_gamer({'name':'Shermy','availability': ["Tuesday", "Thursday", "Sunday"]}, g
 add_gamer({'name':'Rerun','availability': ["Wednesday", "Saturday"]}, gamers)
 add_gamer({'name': 'Eudora', 'availability': ["Monday", "Friday"]}, gamers)
 add_gamer({'name':'Sally','availability': ["Friday", "Sunday"]}, gamers)
-add_gamer({'name':'Linus','availability': ["Tueday", "Thursday", "Saturday"]}, gamers)
+add_gamer({'name':'Linus','availability': ["Tuesday", "Thursday", "Saturday"]}, gamers)
 add_gamer({'name':'Lucy','availability': ["Monday", "Wednesday", "Thursday", "Saturday"]}, gamers)
 add_gamer({'name':'Schroeder','availability': ["Sunday", "Tuesday", "Wednesday"]}, gamers)
 add_gamer({'name':'Peppermint Patty','availability': ["Monday", "Tuesday", "Thursday"]}, gamers)
@@ -81,3 +81,9 @@ def find_best_night(availability_table):
             best_night = day
             best_availability = availability
     return best_night
+
+# Best day to host game night
+game_night = find_best_night(count_availability)
+print(game_night)
+# output
+# Tuesday
