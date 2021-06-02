@@ -67,10 +67,17 @@ def calculate_availability(gamers_list, available_frequency):
         for day in gamer['availability']:
             available_frequency[day] += 1
 
-# Best night to run Time Travel!
+# Best week day night to run Time Travel!
 calculate_availability(gamers, count_availability)
 print(count_availability)
 # output
 # {'Monday': 6, 'Tuesday': 9, 'Wednesday': 6, 'Thursday': 9, 'Friday': 7, 'Saturday': 6, 'Sunday': 7}
 
-  
+# Day(s) of week for attendance of most available people 
+def find_best_night(availability_table):
+    best_availability = 0
+    for day, availability in availability_table.items():
+        if availability > best_availability:
+            best_night = day
+            best_availability = availability
+    return best_night
