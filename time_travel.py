@@ -98,3 +98,23 @@ print(attending_game_night)
 # output
 # [{'name': 'Charlie Brown', 'availability': ['Tuesday', 'Wednesday', 'Thursday']}, {'name': 'Snoopy', 'availability': ['Tuesday', 'Thursday', 'Saturday']}, {'name': 'Shermy', 'availability': ['Tuesday', 'Thursday', 'Sunday']}, {'name': 'Linus', 'availability': ['Tuesday', 'Thursday', 'Saturday']}, {'name': 'Schroeder', 'availability': ['Sunday', 'Tuesday', 'Wednesday']}, {'name': 'Peppermint Patty', 'availability': ['Monday', 'Tuesday', 'Thursday']}, {'name': 'Frieda', 'availability': ['Sunday', 'Tuesday', 'Saturday']}, {'name': 'Franklin', 'availability': ['Tuesday', 'Thursday', 'Friday']}, {'name': 'Pig-Pen', 'availability': ['Sunday', 'Monday', 'Tuesday']}]
 
+# Generating an E-mail for the Participants
+# To let attendees know that game night is on a night they can attend. 
+# Step 1 - Create a form email to send to each of the participants (to be filled out with data later).
+form_email = """
+Dear {name},
+
+The Time Travel Agency is happy to host "{game}" night and wishes you will attend. Come by on {day_of_week} and have a blast!
+
+Captivatingly Yours,
+the Time Travel Agency
+"""
+
+# Step 2 - function
+def send_email(gamers_who_can_attend, day, game):
+    for gamer in gamers_who_can_attend:
+        print(form_email.format(name=gamer['name'], day_of_week=day, game=game))
+        
+send_email(attending_game_night, game_night, "Time Travel!")
+
+# To set-up a second game night during week
