@@ -87,3 +87,14 @@ game_night = find_best_night(count_availability)
 print(game_night)
 # output
 # Tuesday
+
+# List of all available people on day the game night will be hosted.
+def available_on_night(gamers_list, day):
+    return [gamer for gamer in gamers_list if day in gamer['availability']]
+
+attending_game_night = available_on_night(gamers, game_night)
+
+print(attending_game_night)
+# output
+# [{'name': 'Charlie Brown', 'availability': ['Tuesday', 'Wednesday', 'Thursday']}, {'name': 'Snoopy', 'availability': ['Tuesday', 'Thursday', 'Saturday']}, {'name': 'Shermy', 'availability': ['Tuesday', 'Thursday', 'Sunday']}, {'name': 'Linus', 'availability': ['Tuesday', 'Thursday', 'Saturday']}, {'name': 'Schroeder', 'availability': ['Sunday', 'Tuesday', 'Wednesday']}, {'name': 'Peppermint Patty', 'availability': ['Monday', 'Tuesday', 'Thursday']}, {'name': 'Frieda', 'availability': ['Sunday', 'Tuesday', 'Saturday']}, {'name': 'Franklin', 'availability': ['Tuesday', 'Thursday', 'Friday']}, {'name': 'Pig-Pen', 'availability': ['Sunday', 'Monday', 'Tuesday']}]
+
