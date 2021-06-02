@@ -116,5 +116,141 @@ def send_email(gamers_who_can_attend, day, game):
         print(form_email.format(name=gamer['name'], day_of_week=day, game=game))
         
 send_email(attending_game_night, game_night, "Time Travel!")
+# output
+# Dear Charlie Brown,
+
+# The Time Travel Agency is happy to host "Time Travel!" night and wishes you will attend. Come by on Tuesday and have a blast!
+
+# Captivatingly Yours,
+# the Time Travel Agency
+
+
+# Dear Snoopy,
+
+# The Time Travel Agency is happy to host "Time Travel!" night and wishes you will attend. Come by on Tuesday and have a blast!
+
+# Captivatingly Yours,
+# the Time Travel Agency
+
+
+# Dear Shermy,
+
+# The Time Travel Agency is happy to host "Time Travel!" night and wishes you will attend. Come by on Tuesday and have a blast!
+
+# Captivatingly Yours,
+# the Time Travel Agency
+
+
+# Dear Linus,
+
+# The Time Travel Agency is happy to host "Time Travel!" night and wishes you will attend. Come by on Tuesday and have a blast!
+
+# Captivatingly Yours,
+# the Time Travel Agency
+
+
+# Dear Schroeder,
+
+# The Time Travel Agency is happy to host "Time Travel!" night and wishes you will attend. Come by on Tuesday and have a blast!
+
+# Captivatingly Yours,
+# the Time Travel Agency
+
+
+# Dear Peppermint Patty,
+
+# The Time Travel Agency is happy to host "Time Travel!" night and wishes you will attend. Come by on Tuesday and have a blast!
+
+# Captivatingly Yours,
+# the Time Travel Agency
+
+
+# Dear Frieda,
+
+# The Time Travel Agency is happy to host "Time Travel!" night and wishes you will attend. Come by on Tuesday and have a blast!
+
+# Captivatingly Yours,
+# the Time Travel Agency
+
+
+# Dear Franklin,
+
+# The Time Travel Agency is happy to host "Time Travel!" night and wishes you will attend. Come by on Tuesday and have a blast!
+
+# Captivatingly Yours,
+# the Time Travel Agency
+
+
+# Dear Pig-Pen,
+
+# The Time Travel Agency is happy to host "Time Travel!" night and wishes you will attend. Come by on Tuesday and have a blast!
+
+# Captivatingly Yours,
+# the Time Travel Agency
+
 
 # To set-up a second game night during week
+unable_to_attend_best_night = [gamer for gamer in gamers if game_night not in gamer['availability']]
+second_night_availability = build_daily_frequency_table()
+calculate_availability(unable_to_attend_best_night, second_night_availability)
+second_night = find_best_night(second_night_availability)
+
+# To send out an email to everyone (whether they can attend the first night or not) who marked themselves as available on second game night.
+
+available_second_game_night = available_on_night(gamers, second_night)
+send_email(available_second_game_night, second_night, "Time Travel!")
+# output
+# Dear Woodstock,
+
+# The Time Travel Agency is happy to host "Time Travel!" night and wishes you will attend. Come by on Friday and have a blast!
+
+# Captivatingly Yours,
+# the Time Travel Agency
+
+
+# Dear Eudora,
+
+# The Time Travel Agency is happy to host "Time Travel!" night and wishes you will attend. Come by on Friday and have a blast!
+
+# Captivatingly Yours,
+# the Time Travel Agency
+
+
+# Dear Sally,
+
+# The Time Travel Agency is happy to host "Time Travel!" night and wishes you will attend. Come by on Friday and have a blast!
+
+# Captivatingly Yours,
+# the Time Travel Agency
+
+
+# Dear Marcie,
+
+# The Time Travel Agency is happy to host "Time Travel!" night and wishes you will attend. Come by on Friday and have a blast!
+
+# Captivatingly Yours,
+# the Time Travel Agency
+
+
+# Dear Franklin,
+
+# The Time Travel Agency is happy to host "Time Travel!" night and wishes you will attend. Come by on Friday and have a blast!
+
+# Captivatingly Yours,
+# the Time Travel Agency
+
+
+# Dear Violet,
+
+# The Time Travel Agency is happy to host "Time Travel!" night and wishes you will attend. Come by on Friday and have a blast!
+
+# Captivatingly Yours,
+# the Time Travel Agency
+
+
+# Dear Patty,
+
+# The Time Travel Agency is happy to host "Time Travel!" night and wishes you will attend. Come by on Friday and have a blast!
+
+# Captivatingly Yours,
+# the Time Travel Agency
