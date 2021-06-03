@@ -1,7 +1,3 @@
-# time_travel
-Create a system for organizing and tracking gamer’s availability.  Find best day to host a game night and send out emails to the attendees to let them know when to come. 
-
-
 <h1>Dictionaries - Time Travel</h1>
 <h3>Create a system for organizing and tracking gamer’s availability.  Find best day to host a game night and send out emails to the attendees to let them know when to come.</h3>
 
